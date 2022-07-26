@@ -7,7 +7,7 @@ import path from "path";
 const app: Application = express();
 
 // app.use("/users", userRoutes);
-app.use(express.static(path.join(process.cwd(), '..', 'client', 'build'))); //Serves resources from public folder
+app.use(express.static(path.join(process.cwd(), '..', 'client', 'build')));
 
 app.use("/api", (req: Request, res: Response, next: NextFunction): void => {
   res.json({ message: "Hello!" });
